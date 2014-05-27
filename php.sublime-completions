@@ -1,0 +1,102 @@
+{
+	"scope": "source.php - variable.other.php",
+
+	"completions":
+	[
+		//预定义常量
+		"DS",
+
+		//路径常量
+		"AROOT",
+		"FROOT",
+		//系统常量
+
+		//项目中C函数默认获取到的所有配置键名
+
+		"TEMPLATE_NAME",
+		{ "trigger": "lp4doc", "contents": "    /**\n     * 登录招聘者\n     * @ApiDescription(section=\"Recruiter\", description=\"登录招聘者\")\n     * @ApiLazyRoute(uri=\"/recruiter/login\",method=\"POST\")\n     * @ApiParams(name=\"email\", type=\"string\", nullable=false, description=\"email\", check=\"check_not_empty\", cnname=\"用户ID\")\n     * @ApiParams(name=\"password\", type=\"string\", nullable=false, description=\"password\", check=\"check_not_empty\", cnname=\"用户密码\")\n     * @ApiReturn(type=\"object\", sample=\"{'code': 0,'message': 'success'}\")\n     */" },
+		{ "trigger": "app", "contents": "     * @ApiParams(name=\"${1:uid}\", type=\"${2:int}\", nullable=${3:false}, description=\"${4:Uid}\", check=\"${5:i|check_not_empty}\", cnname=\"${6:用户ID}\")$0" },
+		//系统函数
+
+		{ "trigger": "dlog", "contents": "dlog(${1:\\$log});$0" },
+		{ "trigger": "is_devmode", "contents": "is_devmode()$0" },
+		{ "trigger": "on_sae", "contents": "on_sae()$0" },
+		{ "trigger": "t", "contents": "t(${1:})$0" },
+		{ "trigger": "u", "contents": "u(${1:})$0" },
+		{ "trigger": "i", "contents": "i(${1:})$0" },
+		{ "trigger": "z", "contents": "z(${1:})$0" },
+		{ "trigger": "v", "contents": "v(${1:})$0" },
+		{ "trigger": "g", "contents": "g(${1:})$0" },
+		{ "trigger": "ne", "contents": "ne(${1:})$0" },
+		{ "trigger": "c", "contents": "c(${1:${2:\\$key}${3: ,\\$subkey}})$0" },
+		{ "trigger": "s", "contents": "s(${1:})$0" },
+		{ "trigger": "db", "contents": "db(${1:})$0" },
+
+		{ "trigger": "get_data", "contents": "get_data(${1:\\$sql})$0" },
+		{ "trigger": "get_line", "contents": "get_line(${1:\\$sql})$0" },
+		{ "trigger": "get_var", "contents": "get_var(${1:\\$sql})$0" },
+		{ "trigger": "run_sql", "contents": "run_sql(${1:\\$sql})$0" },
+		{ "trigger": "get_bind_params", "contents": "get_bind_params(${1:\\$sql})$0" },
+
+		{ "trigger": "type2pdo", "contents": "type2pdo(${1:\\$type})$0" },
+
+		{ "trigger": "load_data_from_file", "contents": "load_data_from_file(${1:\\$file}${2:, \\$pdo})$0" },
+
+		{ "trigger": "split_sql_file", "contents": "split_sql_file(${1:\\$sql}${2:, \\$delimiter = ';'})$0" },
+
+		{ "trigger": "check_email", "contents": "check_email(${1:})$0" },
+
+		{ "trigger": "check_int", "contents": "check_int(${1:})$0" },
+
+		{ "trigger": "check_not_empty", "contents": "check_not_empty(${1:})$0" },
+
+		{ "trigger": "check_not_zero", "contents": "check_not_zero(${1:})$0" },
+
+		{ "trigger": "donothing", "contents": "donothing(${1:})$0" },
+
+		//字符串Helper函数
+
+		{ "trigger": "first", "contents": "first(${1:})$0" },
+
+		{ "trigger": "last", "contents": "last(${1:})$0" },
+
+		{ "trigger": "end_with", "contents": "end_with(${1:\\$str} ${2:, \\$find})$0" },
+
+		{ "trigger": "begin_with", "contents": "begin_with(${1:\\$str} ${2:, \\$find})$0" },
+
+		{ "trigger": "wintval", "contents": "wintval(${1:\\$str})$0" },
+
+		{ "trigger": "rremove", "contents": "rremove(${1:\\$string} ${2:\\$remove})$0" },
+
+		{ "trigger": "hclean", "contents": "hclean(${1:\\$string})$0" },
+
+		{ "trigger": "tidytag", "contents": "tidytag(${1:\\$content})$0" },
+
+		{ "trigger": "checkhtml", "contents": "checkhtml(${1:\\$html})$0" },
+
+		{ "trigger": "dhtmlspecialchars", "contents": "dhtmlspecialchars(${1:\\$string} ${2:, \\$flag = null})$0" },
+
+		//请求相关函数
+		{ "trigger": "ajax_echo", "contents": "ajax_echo(${1:\\$content})$0" },
+
+		{ "trigger": "apache_request_headers", "contents": "apache_request_headers()$0" },
+
+		{ "trigger": "is_ajax_request", "contents": "is_ajax_request()$0" },
+
+		{ "trigger": "is_json_request", "contents": "is_json_request()$0" },
+
+		//响应相关函数
+		{ "trigger": "response", "contents": "response()$0" },
+
+		{ "trigger": "send_json", "contents": "send_json(${1:\\$obj})$0" },
+
+		{ "trigger": "send_result", "contents": "send_result(${1:\\$data})$0" },
+
+		{ "trigger": "send_error", "contents": "send_error(${1:\\$type} ${2:,\\$info = null})$0" },
+
+		{ "trigger": "get_error", "contents": "get_error(${1:\\$type})$0" },
+
+		//元数据相关
+		{ "trigger": "get_error", "contents": "get_error(${1:\\$type})$0" }
+	]
+}
